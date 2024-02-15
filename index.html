@@ -9,25 +9,43 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="app">
-      <section>
-        <header class="header">INSTAGRAM</header>
+      <section class="section">
+        <header class="header">
+          <img
+            class="logo"
+            src="https://assets.stickpng.com/images/5a4e432a2da5ad73df7efe7a.png"
+            alt="inst-logo"
+          />
+        </header>
         <main class="main">
           <div class="user">
-            <div class="auth">
+            <form class="auth">
               <div class="inputs">
-                <input
-                  type="text"
-                  class="input"
-                  placeholder="Номер
-                телефону,і'мя користувача або ел. ..."
-                />
-                <input type="text" class="input" placeholder="Пароль" />
+                <label>
+                  <span class="span-input"
+                    >Номер телефону, і'мя користувача або ел. ...</span
+                  >
+                  <input type="text" class="input" />
+                </label>
+                <label>
+                  <span class="span-input">Пароль</span>
+                  <input type="password" class="input" />
+                  <span class="show-password"></span>
+                </label>
               </div>
               <button class="button" id="btn">Увійти</button>
-            </div>
+            </form>
             <div class="utils">
               <button class="facebook">
                 <img

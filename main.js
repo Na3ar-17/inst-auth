@@ -1,18 +1,19 @@
-import './style.css'
+document.addEventListener('DOMContentLoaded', () => {
+  const inputs = document.querySelectorAll('.input')
 
-// document.querySelector('#app').innerHTML = `
-// <section>
-// <header class="header">INSTAGRAM</header>
-// <main class="main">
-//   <div class="user">
-//     <div class="auth">
-//       <div class="inputs">
-//         <input type="text" class="input" placeholder="Номер
-//         телефону,і'мя користувача або ел. ...>
-//         <input type="text" class="input" placeholder="Пароль" />
-//       </div>
-//     </div>
-//   </div>
-// </main>
-// </section>
-// `
+  inputs.forEach((input) => {
+    input.addEventListener('input', (e) => {
+      const span = e.target.previousElementSibling
+
+      if (e.target.value.length === 0) {
+        span.classList.add('span-end')
+        input.style.paddingTop = '7px'
+      } else {
+        span.classList.add('span-active')
+        span.classList.remove('span-end')
+        input.style.fontSize = '14px'
+        input.style.paddingTop = '13px'
+      }
+    })
+  })
+})
